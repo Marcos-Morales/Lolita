@@ -6,8 +6,12 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//Group Name: Lolita: Erick Truong, Marcos Morales, Davis Moran
+
 namespace Random_Seat_Generator
 {
+
     class Program
     {
         static void Main(string[] args)
