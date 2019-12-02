@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="OpenFileExplorer" Content="Open File Explorer" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="116" Click="OpenFileExplorer_Click"/>
+        <TextBox x:Name="FileName" HorizontalAlignment="Left" Height="20" Margin="131,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" TextChanged="FileName_TextChanged"/>
+        <ListBox x:Name="SeatList" HorizontalAlignment="Left" Height="399" Margin="422,10,0,0" VerticalAlignment="Top" Width="360"/>
+        <Button x:Name="ReadFile" Content="Generate Seating" HorizontalAlignment="Left" Margin="209,107,0,0" VerticalAlignment="Top" Width="97" Click="ReadFile_Click"/>
+        <TextBox x:Name="BrokenSeatText" HorizontalAlignment="Left" Height="20" Margin="209,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97" TextChanged="FileName_Copy_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,271,0,0" TextWrapping="Wrap" Text="If there are seats where computers do not work, enter them to the right separated by commas." VerticalAlignment="Top" Width="194" Height="48"/>
+        <Button x:Name="BrokenSeats" Content="Enter Seat" HorizontalAlignment="Left" Margin="229,322,0,0" VerticalAlignment="Top" Width="63" Height="19" Click="BrokenSeats_Click"/>
+
     </Grid>
 </Window>
