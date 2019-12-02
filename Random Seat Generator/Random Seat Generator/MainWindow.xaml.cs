@@ -21,8 +21,6 @@ namespace Random_Seat_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<int> brokenSeatNumber = new List<int>();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -37,14 +35,16 @@ namespace Random_Seat_Generator
 
         private void ReadFile_Click(object sender, RoutedEventArgs e)
         {
-            if(File.Exists(FileName.Text) == true)
+            if (File.Exists(FileName.Text) == true)
             {
                 var line = File.ReadAllLines(FileName.Text);
+
                 List<int> random = new List<int>();
+                List<int> exclude = new List<int>();
 
                 Random Random = new Random();
 
-                for(int i = 0; i < line.Length; i++)
+                for (int i = 0; i < line.Length; i++)
                 {
                     int number;
 
@@ -52,9 +52,15 @@ namespace Random_Seat_Generator
                     string FirstName = column[0];
                     string LastName = column[1];
 
+                    exclude.Add()
+
                     do
                     {
                         number = Random.Next(1, line.Length + 1);
+                        if (exclude.Contains(number))
+                        {
+                            number++;
+                        }
                     } while (random.Contains(number));
 
                     SeatList.Items.Add($"{LastName}, {FirstName} - Computer #{number}");
@@ -63,20 +69,16 @@ namespace Random_Seat_Generator
                 }
             }
         }
-
-        private void FileName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
 
         private void FileName_Copy_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void BrokenSeats_Click(object sender, RoutedEventArgs e)
+        private void FileName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+
         }
     }
 }
