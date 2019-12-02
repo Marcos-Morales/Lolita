@@ -1,1 +1,1 @@
-# Lolita (Random Seat Generator) BY: Davis Moran, Marcos Morales, and Erick Truong 
+# Lolita (Random Seat Generator) BY:Davis Moran, Marcos Morales, and Erick Truong 
