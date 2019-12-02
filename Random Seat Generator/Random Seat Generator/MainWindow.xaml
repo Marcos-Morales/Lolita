@@ -10,8 +10,19 @@
         <Button x:Name="OpenFileExplorer" Content="Open File Explorer" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="116" Click="OpenFileExplorer_Click"/>
         <TextBox x:Name="FileName" HorizontalAlignment="Left" Height="20" Margin="131,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" TextChanged="FileName_TextChanged"/>
         <ListBox x:Name="SeatList" HorizontalAlignment="Left" Height="399" Margin="422,10,0,0" VerticalAlignment="Top" Width="360"/>
-        <Button x:Name="ReadFile" Content="Generate Seating" HorizontalAlignment="Left" Margin="209,180,0,0" VerticalAlignment="Top" Width="97" Click="ReadFile_Click"/>
+        <Button x:Name="ReadFile" Content="Generate Seating" HorizontalAlignment="Left" Margin="206,221,0,0" VerticalAlignment="Top" Width="97" Click="ReadFile_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21"><Run Text="Class Roster File"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="Exclusion" HorizontalAlignment="Left" Height="23" Margin="131,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"/>
+        <Button x:Name="AddExclusions" Content="Add Excluded Chairs" HorizontalAlignment="Left" Margin="177,151,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.5,0.5" Click="AddExclusions_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.182"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>

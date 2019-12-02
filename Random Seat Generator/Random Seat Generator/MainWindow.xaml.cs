@@ -21,6 +21,7 @@ namespace Random_Seat_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<int> exclude = new List<int>();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +41,6 @@ namespace Random_Seat_Generator
                 var line = File.ReadAllLines(FileName.Text);
 
                 List<int> random = new List<int>();
-                List<int> exclude = new List<int>();
 
                 Random Random = new Random();
 
@@ -51,16 +51,11 @@ namespace Random_Seat_Generator
                     var column = line[i].Split(',');
                     string FirstName = column[0];
                     string LastName = column[1];
-
-                    exclude.Add()
+                   
 
                     do
                     {
                         number = Random.Next(1, line.Length + 1);
-                        if (exclude.Contains(number))
-                        {
-                            number++;
-                        }
                     } while (random.Contains(number));
 
                     SeatList.Items.Add($"{LastName}, {FirstName} - Computer #{number}");
@@ -79,6 +74,11 @@ namespace Random_Seat_Generator
         private void FileName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void AddExclusions_Click(object sender, RoutedEventArgs e)
+        {
+            exclude.Add(int.Parse(Exclusion.Text));
         }
     }
 }
