@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RandomSeatGenerator
+namespace Random_Seat_Generator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,13 +23,6 @@ namespace RandomSeatGenerator
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void FileExplorer_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
-            var file = dialog.ShowDialog();
-            fileName.Text = dialog.FileName;
         }
     }
 }

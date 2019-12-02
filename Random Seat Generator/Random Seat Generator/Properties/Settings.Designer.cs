@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RandomSeatGenerator.Properties
+namespace Random_Seat_Generator.Properties
 {
 
 
