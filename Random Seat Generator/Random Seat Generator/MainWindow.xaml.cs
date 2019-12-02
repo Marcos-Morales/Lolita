@@ -56,6 +56,11 @@ namespace Random_Seat_Generator
                     do
                     {
                         number = Random.Next(1, line.Length + 1);
+                        //This code below freezes the program when it runs.
+                        if(exclude.Contains(number))
+                        {
+                            number++;
+                        }
                     } while (random.Contains(number));
 
                     SeatList.Items.Add($"{LastName}, {FirstName} - Computer #{number}");
